@@ -30,5 +30,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 application = Cling(get_wsgi_application())
 
+# Heroku 添加設置
+
+from whitenoise.django import DjangoWhiteNoise
+application = DjangoWhiteNoise(application)
+
 
 

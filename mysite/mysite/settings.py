@@ -14,6 +14,9 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # mysite/setting.py
 import os
 
+#Heroku 設置
+import dj_database_url
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -26,7 +29,10 @@ SECRET_KEY = 'dyas%*11!on_a5@0k+h8sh$qs#w*i0kr3k@2r1*%+e5hgbd!v_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Heroku 設置 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+# Local 設置 ALLOWED_HOSTS = [  ]
+
+ALLOWED_HOSTS = [ '127.0.0.1', '.herokuapp.com' ]
 
 
 # Application definition
@@ -78,8 +84,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
+	'''
+	本機資料庫設定
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+		'''
+		# Heroku 雲端設定 
+		
+		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'djangogirls',
+        'USER': 'name',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
+		
+		
     }
 }
 
@@ -102,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Heroku 雲端設定
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
