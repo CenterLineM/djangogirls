@@ -32,7 +32,7 @@ DEBUG = True
 # Heroku 設置 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 # Local 設置 ALLOWED_HOSTS = [  ]
 
-ALLOWED_HOSTS = [ '127.0.0.1', '.herokuapp.com' ]
+ALLOWED_HOSTS = [ ]
 
 
 # Application definition
@@ -84,19 +84,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-	'''
-	本機資料庫設定
+	
+	
+	# 本機資料庫設定
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-		'''
-		# Heroku 雲端設定 
-		
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
-        'USER': 'name',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
+	
+	
 		
 		
     }
