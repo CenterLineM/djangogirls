@@ -3,7 +3,7 @@ from .settings import *
 
 import dj_database_url
 DATABASE = {
-	'defalt': dj_database_url.config(),
+	'default': dj_database_url.config(),
 	
 }
 
