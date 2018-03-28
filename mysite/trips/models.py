@@ -13,5 +13,5 @@ class Post(models.Model):
 	created_at = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return self.name.encode('utf8')
+		return self.title.encode('utf8')
 		#return self.title
