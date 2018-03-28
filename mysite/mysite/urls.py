@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 
 """mysite URL Configuration
 
@@ -15,10 +15,10 @@ Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-# -*- coding: utf-8 -*-
+
 from django.conf.urls import include, url
 from django.contrib import admin
-
+# -*- coding: utf-8 -*-
 # 呼叫寫好的App 程式
 # 先 import 剛剛寫的 view function：
 # 增加動態網址傳送 post_detail
