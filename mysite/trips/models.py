@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # trips/models.py
 from django.db import models
 

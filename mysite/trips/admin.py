@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # trips/admin.py
 
 from django.contrib import admin
