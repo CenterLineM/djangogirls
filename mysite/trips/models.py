@@ -20,7 +20,7 @@ class Post(models.Model):
 		return self.title.encode('utf8')
 		#return self.title
 
-#網站
+#部落格資料庫
 class PostPag(models.Model):
 	title = models.CharField(max_length=200)
 	slug = models.CharField(max_length=200)

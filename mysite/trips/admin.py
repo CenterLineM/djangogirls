@@ -8,3 +8,5 @@ from .models import Post
 # Register your models here.
 
 admin.site.register(Post)
+# 那入管理
+admin.site.register(PostPag)
