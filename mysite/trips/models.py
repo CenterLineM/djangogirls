@@ -2,6 +2,10 @@
 # trips/models.py
 from django.db import models
 
+# 時區套件
+from django.utils import timezone
+
+
 # Create your models here.
 
 
@@ -15,3 +19,19 @@ class Post(models.Model):
 	def __str__(self):
 		return self.title.encode('utf8')
 		#return self.title
+
+#網站
+class PostPag(models.Model):
+	title = models.CharField(max_length=200)
+	slug = models.CharField(max_length=200)
+	body = models.TextField()
+	pub_date = models.DateTimeField(default=timezone.now)
+
+	class Meta:
+		ordering = ('-pub_date',)
+			
+
+	"""docstring for PostPag"""
+	def __unicode__(self):
+		return self.title
+
