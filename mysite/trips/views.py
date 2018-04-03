@@ -6,6 +6,9 @@ from datetime import datetime
 #匯入所需 model , import  Post
 from .models import Post
 
+# 匯入頁面
+from .models import PostPag
+
 
 # trips/views.py
 # Create your views here.
@@ -31,3 +34,15 @@ def home(request):
 def post_detail(request, pk):
 	post = Post.objects.get(pk=pk)
 	return render(request, 'post.html', {'post': post})
+
+
+
+# 初始頁面
+# 共用模板
+def PageHome(request):
+	template = get_template('pagehome.html')
+	posts = PostPag.objects.all()
+	now = datetime.now()
+	html = template.render(local())
+	return HttpResponse(html)
+

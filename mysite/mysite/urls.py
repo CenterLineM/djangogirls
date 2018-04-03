@@ -24,6 +24,8 @@ from django.contrib import admin
 # 增加動態網址傳送 post_detail
 from trips.views import hello_world, home, post_detail
 
+#載入 自創頁面
+from trips.views import PageHome
 
 
 urlpatterns = [
@@ -38,6 +40,9 @@ urlpatterns = [
 
     #單頁頁面
     url(r'^post/(?P<pk>\d+)/$', post_detail, name='post_detail'),
+
+    #初始頁面
+    url(r'^pagehom/$', PageHome),
 
 
 
