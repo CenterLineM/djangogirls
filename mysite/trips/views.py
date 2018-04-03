@@ -9,6 +9,8 @@ from .models import Post
 # 匯入頁面
 from .models import PostPag
 
+#
+from django.template.loader import get_template
 
 # trips/views.py
 # Create your views here.
