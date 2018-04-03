@@ -45,6 +45,6 @@ def PageHome(request):
 	template = get_template('pagehome.html')
 	posts = PostPag.objects.all()
 	now = datetime.now()
-	html = template.render(local())
+	html = template.render(locals())
 	return HttpResponse(html)
 
