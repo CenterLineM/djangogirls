@@ -130,4 +130,4 @@ STATIC_URL = '/static/'
 #bootstrap 設定
 
 
-BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
+BOOTSTRAP_ADMIN_SIDEBAR_MENU = False
