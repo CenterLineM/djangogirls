@@ -128,9 +128,6 @@ STATIC_URL = '/static/'
 # DATABASES['default'].update(db_from_env)
 
 #bootstrap 設定
-from django.conf import global_settings
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
-    'django.core.context_processors.request',
-)
+
 
 BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
