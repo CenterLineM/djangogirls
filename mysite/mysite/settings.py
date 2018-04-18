@@ -41,7 +41,7 @@ ALLOWED_HOSTS = [ ]
 # Application definition
 
 INSTALLED_APPS = (
-    'bootstrap_admin',  # admin介面變好看
+    'django_admin_bootstrapped',# admin介面變好看
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,4 +130,3 @@ STATIC_URL = '/static/'
 #bootstrap 設定
 
 
-BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
